@@ -1,47 +1,48 @@
-# Welcome
+### ContractHub
 
-## Project info
-
-This is a Vite + React + TypeScript starter for the ContractHub dashboard.
-
-## How can I edit this code?
-
-You can edit the project locally with your preferred IDE. The only requirement is Node.js & npm (or pnpm/yarn).
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+## Setup instructions
+- **Prerequisites**: Node.js 18+ and npm 9+ recommended.
+- **Install dependencies**:
+```bash
 npm install
-
-# Step 4: Start the development server.
+```
+- **Start dev server** (Vite on port 8080):
+```bash
 npm run dev
 ```
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Build the production bundle and deploy it to your hosting provider:
-
-```sh
+- **Build for production** (outputs to `dist`):
+```bash
 npm run build
 ```
+- **Preview production build**:
+```bash
+npm run preview
+```
 
-## Can I connect a custom domain?
+Notes:
+- Dev server binds to host `::` (all interfaces, IPv6) and port `8080` (see `vite.config.ts`).
+- Static data and assets live in `public/` (e.g., `contracts.json`, `contract-details.json`).
+- Path alias `@` points to `./src` (import like `@/components/...`).
 
-Yes — configure your hosting provider's domain settings or the platform you deploy to.
+## Tech stack choices
+- **Framework**: React 18 with TypeScript.
+- **Bundler/dev server**: Vite 5 with `@vitejs/plugin-react-swc` (SWC for fast TS/JSX).
+- **Routing**: `react-router-dom` v6.
+- **Server state**: TanStack Query (`@tanstack/react-query`).
+- **Forms & validation**: `react-hook-form` + `zod` (via `@hookform/resolvers`).
+- **UI system**:
+  - Tailwind CSS 3 with `tailwindcss-animate` and custom tokens in `tailwind.config.ts`.
+  - Headless primitives from Radix UI (`@radix-ui/react-*`).
+  - shadcn/ui-style components under `src/components/ui/*`.
+  - Icons: `lucide-react`; toasts: `sonner`.
+  - Extras: `embla-carousel-react`, `react-resizable-panels`, `recharts`, `date-fns`.
+- **Linting**: ESLint 9 with TypeScript ESLint, React Hooks, React Refresh (`eslint.config.js`).
+- **Output**: Static site in `dist/` suitable for static hosting.
+
+## Assumptions made
+- **No backend required**: Contract data is served from static JSON in `public/`.
+- **Client-only auth**: `AuthContext` maintains local state; no external auth provider configured.
+- **Env vars**: None required to run locally; no `.env` needed by default.
+- **Port/host**: Local dev on port `8080`; change in `vite.config.ts` if necessary.
+- **Package manager**: `npm` is primary (has `package-lock.json`); a `bun.lockb` exists but npm workflow is canonical here.
+- **Browser support**: Modern evergreen browsers; no legacy support.
