@@ -1,0 +1,50 @@
+{
+  "c1": {
+    "id": "c1",
+    "name": "MSA 2025",
+    "parties": "Microsoft & ABC Corp",
+    "start": "2023-01-01",
+    "expiry": "2025-12-31",
+    "status": "Active",
+    "risk": "Medium",
+    "clauses": [
+      { "title": "Termination", "summary": "90 days notice period required for contract termination.", "confidence": 0.82 },
+      { "title": "Liability Cap", "summary": "Total liability limited to 12 months' fees.", "confidence": 0.87 },
+      { "title": "Data Security", "summary": "SOC 2 Type II compliance required at all times.", "confidence": 0.94 },
+      { "title": "Service Level Agreement", "summary": "99.9% uptime guarantee with penalties for downtime.", "confidence": 0.89 }
+    ],
+    "insights": [
+      { "risk": "High", "message": "Liability cap excludes data breach costs, potentially exposing significant financial risk." },
+      { "risk": "Medium", "message": "Auto-renews unless cancelled 60 days before expiry date." },
+      { "risk": "Low", "message": "Standard termination clauses align with industry best practices." }
+    ],
+    "evidence": [
+      { "source": "Section 12.2", "snippet": "Total liability limited to 12 months' fees paid under this Agreement.", "relevance": 0.91 },
+      { "source": "Section 8.4", "snippet": "Either party may terminate with 90 days written notice.", "relevance": 0.85 },
+      { "source": "Section 15.1", "snippet": "This Agreement shall automatically renew for successive one-year terms.", "relevance": 0.78 }
+    ]
+  },
+  "c2": {
+    "id": "c2",
+    "name": "Network Services Agreement",
+    "parties": "TelNet & ABC Corp",
+    "start": "2022-10-10",
+    "expiry": "2025-10-10",
+    "status": "Renewal Due",
+    "risk": "High",
+    "clauses": [
+      { "title": "Service Availability", "summary": "Network uptime guaranteed at 99.5% minimum.", "confidence": 0.92 },
+      { "title": "Penalty Clauses", "summary": "Service credits for downtime exceeding SLA.", "confidence": 0.88 },
+      { "title": "Equipment Ownership", "summary": "Provider retains ownership of all network equipment.", "confidence": 0.95 }
+    ],
+    "insights": [
+      { "risk": "High", "message": "Contract expires in 30 days with no renewal terms negotiated." },
+      { "risk": "High", "message": "Service interruption risk if contract lapses." },
+      { "risk": "Medium", "message": "Equipment removal required if contract terminates." }
+    ],
+    "evidence": [
+      { "source": "Section 4.1", "snippet": "Service availability shall be maintained at no less than 99.5% uptime.", "relevance": 0.89 },
+      { "source": "Section 7.3", "snippet": "All equipment remains property of TelNet throughout the term.", "relevance": 0.82 }
+    ]
+  }
+}
