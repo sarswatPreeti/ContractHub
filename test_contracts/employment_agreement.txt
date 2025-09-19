@@ -1,0 +1,56 @@
+EMPLOYMENT AGREEMENT
+
+This Employment Agreement ("Agreement") is made effective September 20, 2025, between InnovateTech Corp., a Delaware corporation ("Company"), and Alexandra Thompson ("Employee").
+
+POSITION AND DUTIES:
+Employee is hired as Senior Software Engineer and shall perform duties including software development, code review, technical architecture planning, and mentoring junior developers. Employee shall report to the Chief Technology Officer.
+
+COMPENSATION:
+Company shall pay Employee an annual salary of $125,000, payable in bi-weekly installments. Employee shall be eligible for performance-based bonuses at Company's discretion.
+
+BENEFITS:
+Employee shall be entitled to:
+- Health insurance with 80% premium coverage by Company
+- Dental and vision insurance with 50% premium coverage
+- 401(k) plan with 4% company matching
+- Twenty (20) days paid vacation annually
+- Ten (10) days paid sick leave annually
+- Professional development allowance of $3,000 annually
+
+WORKING ARRANGEMENTS:
+Employee may work remotely up to three (3) days per week, subject to business needs and supervisor approval. Core working hours are 10:00 AM to 3:00 PM Pacific Time.
+
+PROBATIONARY PERIOD:
+Employee's employment shall be subject to a ninety (90) day probationary period during which either party may terminate employment with one week's notice.
+
+TERMINATION:
+After the probationary period, either party may terminate employment with two weeks' written notice. Company may terminate immediately for cause, including misconduct, breach of company policies, or unsatisfactory performance.
+
+CONFIDENTIALITY AND NON-DISCLOSURE:
+Employee agrees to maintain strict confidentiality regarding Company's proprietary information, trade secrets, customer data, and business strategies during and after employment.
+
+INTELLECTUAL PROPERTY:
+All work product, inventions, and intellectual property created by Employee during employment shall be the exclusive property of Company.
+
+NON-COMPETE CLAUSE:
+For a period of twelve (12) months following termination, Employee agrees not to work for direct competitors within the same geographic market or customer base.
+
+SEVERANCE:
+If Company terminates Employee without cause after the probationary period, Company shall provide two weeks' severance pay and continuation of health benefits for one month.
+
+DISPUTE RESOLUTION:
+Any disputes arising under this Agreement shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
+
+GOVERNING LAW:
+This Agreement shall be governed by the laws of the State of California.
+
+ENTIRE AGREEMENT:
+This Agreement supersedes all previous understandings and constitutes the complete agreement between the parties.
+
+Company: InnovateTech Corp.
+By: David Park, CEO
+Date: September 20, 2025
+
+Employee: Alexandra Thompson
+Signature: _____________________
+Date: September 20, 2025

@@ -1,0 +1,38 @@
+SOFTWARE LICENSE AGREEMENT
+
+This Software License Agreement ("Agreement") is entered into on September 20, 2025, between TechCorp Solutions Inc., a corporation organized under the laws of Delaware ("Licensor"), and Global Enterprises Ltd., a corporation organized under the laws of New York ("Licensee").
+
+GRANT OF LICENSE:
+Subject to the terms and conditions of this Agreement, Licensor hereby grants to Licensee a non-exclusive, non-transferable license to use the software product "DataFlow Pro v3.2" ("Software") for internal business operations only.
+
+TERM:
+This Agreement shall commence on October 1, 2025, and shall remain in effect for a period of three (3) years, unless terminated earlier in accordance with the provisions herein.
+
+PAYMENT TERMS:
+Licensee agrees to pay Licensor an annual license fee of $50,000, payable in quarterly installments of $12,500. Each payment is due within fifteen (15) days of the beginning of each quarter. Late payments shall incur a penalty of 2% per month.
+
+TERMINATION:
+Either party may terminate this Agreement upon sixty (60) days written notice to the other party. Upon termination, Licensee must immediately cease all use of the Software and return or destroy all copies.
+
+LIABILITY LIMITATIONS:
+IN NO EVENT SHALL LICENSOR'S TOTAL LIABILITY EXCEED THE AMOUNT OF FEES PAID BY LICENSEE IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM. LICENSOR SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES.
+
+CONFIDENTIALITY:
+Both parties acknowledge that they may have access to confidential information. All such information shall remain confidential for a period of five (5) years following termination of this Agreement.
+
+INTELLECTUAL PROPERTY:
+All intellectual property rights in the Software remain the exclusive property of Licensor. Licensee acquires no ownership rights in the Software.
+
+GOVERNING LAW:
+This Agreement shall be governed by the laws of the State of Delaware, without regard to conflict of law principles.
+
+ENTIRE AGREEMENT:
+This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements relating to the subject matter herein.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+LICENSOR: TechCorp Solutions Inc.
+By: John Smith, CEO
+
+LICENSEE: Global Enterprises Ltd.
+By: Sarah Johnson, CTO

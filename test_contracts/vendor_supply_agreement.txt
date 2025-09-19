@@ -1,0 +1,63 @@
+VENDOR SUPPLY AGREEMENT
+
+This Vendor Supply Agreement ("Agreement") is entered into on September 20, 2025, between Manufacturing Excellence Inc., a corporation organized under Ohio law ("Buyer"), and Premium Components LLC, a limited liability company organized under Michigan law ("Supplier").
+
+PRODUCTS AND SPECIFICATIONS:
+Supplier agrees to manufacture and deliver custom aluminum components according to Buyer's specifications, including precision-machined parts for automotive applications with tolerances of ±0.001 inches.
+
+QUANTITY AND DELIVERY:
+Supplier shall provide a minimum of 10,000 units per month, with the ability to scale up to 25,000 units based on Buyer's forecasts provided 60 days in advance. Delivery shall be made to Buyer's facility in Columbus, Ohio.
+
+PRICING:
+Base price per unit: $15.50
+Volume discount: 5% for orders exceeding 15,000 units per month
+Price adjustments: Annual review with changes not to exceed 3% annually
+
+PAYMENT TERMS:
+Net 45 days from invoice date. Early payment discount of 2% available for payments made within 15 days. Late payments subject to 1.5% monthly service charge.
+
+QUALITY STANDARDS:
+All products must meet ISO 9001:2015 quality standards and pass Buyer's incoming inspection process. Supplier maintains a defect rate below 0.1% or faces quality penalties.
+
+DELIVERY TERMS:
+- Standard delivery: Within 15 business days of order
+- Rush orders: Available with 5 business day delivery for 15% surcharge
+- Delivery method: FOB destination, Supplier responsibility until received by Buyer
+
+FORCE MAJEURE:
+Neither party shall be liable for delays caused by circumstances beyond reasonable control, including natural disasters, labor strikes, or supply chain disruptions.
+
+TERMINATION:
+Either party may terminate with 90 days written notice. Buyer may terminate immediately for material breach, including failure to meet quality standards or delivery schedules.
+
+INTELLECTUAL PROPERTY:
+All proprietary designs and specifications provided by Buyer remain Buyer's intellectual property. Supplier grants license to use for fulfilling this Agreement only.
+
+WARRANTY:
+Supplier warrants all products free from defects in materials and workmanship for 24 months from delivery. Defective products will be replaced at Supplier's expense.
+
+LIABILITY LIMITATIONS:
+Supplier's total liability shall not exceed the value of products delivered in the six months preceding any claim. Neither party liable for consequential or incidental damages.
+
+CONFIDENTIALITY:
+Both parties agree to maintain confidentiality of proprietary information, specifications, pricing, and business terms for five years following Agreement termination.
+
+COMPLIANCE:
+Supplier shall comply with all applicable laws, regulations, and industry standards, including environmental and safety requirements.
+
+INSURANCE:
+Supplier shall maintain comprehensive general liability insurance of $2,000,000 and product liability insurance of $5,000,000.
+
+TERM:
+This Agreement is effective from October 1, 2025, through September 30, 2028, with automatic renewal for successive one-year periods unless terminated.
+
+GOVERNING LAW:
+This Agreement shall be governed by Ohio state law.
+
+Buyer: Manufacturing Excellence Inc.
+By: Robert Kim, Procurement Director
+Date: September 20, 2025
+
+Supplier: Premium Components LLC
+By: Jennifer Walsh, Sales Manager
+Date: September 20, 2025

@@ -1,0 +1,53 @@
+SERVICE LEVEL AGREEMENT
+
+This Service Level Agreement ("SLA") is entered into on September 20, 2025, between CloudHost Technologies LLC, a limited liability company organized under the laws of California ("Provider"), and Digital Marketing Pro Inc., a corporation organized under the laws of Texas ("Customer").
+
+SERVICES PROVIDED:
+Provider agrees to provide web hosting services, including but not limited to server management, data backup, security monitoring, and technical support for Customer's e-commerce platform.
+
+UPTIME GUARANTEE:
+Provider guarantees 99.9% uptime for all hosted services. Uptime is calculated monthly, excluding scheduled maintenance windows announced with at least 48 hours notice.
+
+PERFORMANCE METRICS:
+- Server response time: Average response time shall not exceed 200 milliseconds
+- Data backup: Daily automated backups with 30-day retention
+- Security scans: Weekly vulnerability assessments and immediate threat response
+
+PAYMENT TERMS:
+Customer shall pay Provider a monthly fee of $2,500 for the services outlined herein. Payment is due on the first day of each month and shall be considered late if not received within ten (10) days of the due date.
+
+SERVICE LEVEL CREDITS:
+If Provider fails to meet the uptime guarantee:
+- 99.5% - 99.8% uptime: 10% credit of monthly fee
+- 99.0% - 99.4% uptime: 25% credit of monthly fee
+- Below 99.0% uptime: 50% credit of monthly fee
+
+SUPPORT RESPONSE TIMES:
+- Critical issues: Response within 1 hour, resolution within 4 hours
+- High priority: Response within 4 hours, resolution within 24 hours
+- Medium priority: Response within 24 hours, resolution within 72 hours
+- Low priority: Response within 72 hours, resolution within 1 week
+
+TERMINATION:
+Either party may terminate this agreement with thirty (30) days written notice. Customer may terminate immediately if Provider fails to meet SLA requirements for two consecutive months.
+
+LIMITATION OF LIABILITY:
+Provider's liability for any breach of this SLA shall be limited to service credits as specified above. In no event shall Provider's total liability exceed three months of service fees.
+
+DATA PROTECTION:
+Provider shall implement industry-standard security measures including encryption, access controls, and compliance with applicable data protection regulations including GDPR and CCPA.
+
+FORCE MAJEURE:
+Neither party shall be liable for delays or failures in performance due to circumstances beyond their reasonable control, including natural disasters, cyber attacks, or government actions.
+
+GOVERNING LAW:
+This SLA shall be governed by the laws of the State of California.
+
+EFFECTIVE PERIOD:
+This SLA is effective from October 1, 2025, to September 30, 2026, and shall automatically renew for successive one-year periods unless terminated.
+
+Provider: CloudHost Technologies LLC
+By: Michael Chen, Operations Director
+
+Customer: Digital Marketing Pro Inc.
+By: Lisa Rodriguez, IT Manager
