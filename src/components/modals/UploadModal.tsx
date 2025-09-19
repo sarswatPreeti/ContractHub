@@ -138,92 +138,190 @@ export function UploadModal({ isOpen, onClose }: UploadModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle>Upload Contracts</DialogTitle>
-          <DialogDescription>
-            Upload your contract documents for analysis and management.
+      <DialogContent className="sm:max-w-lg card-elevated">
+        <DialogHeader className="pb-4">
+          <DialogTitle className="text-2xl font-bold flex items-center gap-2">
+            <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Upload className="h-4 w-4 text-primary" />
+            </div>
+            Upload Contracts
+          </DialogTitle>
+          <DialogDescription className="text-base">
+            Upload your contract documents for analysis and management. Supports multiple file formats.
           </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-4">
-          {/* Upload Area */}
+        <div className="space-y-6">
+          {/* Enhanced Upload Area */}
           <div
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
             className={cn(
-              "border-2 border-dashed rounded-lg p-8 text-center transition-colors",
-              isDragOver
-                ? "border-primary bg-primary/5"
-                : "border-muted-foreground/25 hover:border-muted-foreground/50"
+              "upload-zone relative overflow-hidden group",
+              isDragOver && "drag-over scale-105"
             )}
           >
-            <Upload className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-            <p className="text-sm text-muted-foreground mb-2">
-              Drag and drop your files here, or
-            </p>
-            <Button
-              variant="outline"
-              className="relative"
-              onClick={() => document.getElementById('file-upload')?.click()}
-            >
-              Choose Files
-              <input
-                id="file-upload"
-                type="file"
-                multiple
-                accept=".pdf,.doc,.docx,.txt"
-                onChange={handleFileSelect}
-                className="absolute inset-0 opacity-0 cursor-pointer"
-              />
-            </Button>
-            <p className="text-xs text-muted-foreground mt-2">
-              PDF, DOC, DOCX, TXT files up to 10MB each
-            </p>
+            {/* Background Pattern */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <div className="relative z-10 flex flex-col items-center">
+              <div className={cn(
+                "h-16 w-16 rounded-2xl flex items-center justify-center mb-4 transition-all duration-300",
+                isDragOver ? "bg-primary text-primary-foreground scale-110" : "bg-primary/10 text-primary group-hover:bg-primary/20"
+              )}>
+                <Upload className="h-8 w-8" />
+              </div>
+              
+              <h3 className="text-lg font-semibold mb-2">
+                {isDragOver ? "Drop files here" : "Upload Contract Files"}
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 text-center">
+                Drag and drop your files here, or click to browse
+              </p>
+              
+              <Button
+                variant="outline"
+                className="relative h-11 px-6 border-primary/20 hover:border-primary/40 hover:bg-primary/5 transition-all duration-200"
+                onClick={() => document.getElementById('file-upload')?.click()}
+              >
+                <FileText className="mr-2 h-4 w-4" />
+                Choose Files
+                <input
+                  id="file-upload"
+                  type="file"
+                  multiple
+                  accept=".pdf,.doc,.docx,.txt"
+                  onChange={handleFileSelect}
+                  className="absolute inset-0 opacity-0 cursor-pointer"
+                />
+              </Button>
+              
+              <div className="flex items-center gap-4 mt-4 text-xs text-muted-foreground">
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>PDF, DOC, DOCX, TXT</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Up to 10MB each</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Files List */}
+          {/* Enhanced Files List */}
           {files.length > 0 && (
-            <div className="space-y-2 max-h-60 overflow-y-auto">
-              {files.map((file) => (
-                <div
-                  key={file.id}
-                  className="flex items-center gap-3 p-3 border rounded-lg bg-card"
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wide">
+                  Upload Progress ({files.length} file{files.length !== 1 ? 's' : ''})
+                </h4>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setFiles([])}
+                  className="text-xs text-muted-foreground hover:text-foreground"
                 >
-                  <FileText className="w-8 h-8 text-muted-foreground flex-shrink-0" />
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium truncate">{file.file.name}</p>
-                    <div className="flex items-center gap-2 mt-1">
-                      {getStatusIcon(file.status)}
-                      <span className="text-xs text-muted-foreground">
-                        {file.status === 'uploading' && `${Math.round(file.progress)}%`}
-                        {file.status === 'success' && 'Uploaded'}
-                        {file.status === 'error' && 'Failed'}
-                      </span>
-                    </div>
-                    {file.status === 'uploading' && (
-                      <Progress value={file.progress} className="h-1 mt-2" />
-                    )}
-                  </div>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => removeFile(file.id)}
-                    className="flex-shrink-0"
+                  Clear All
+                </Button>
+              </div>
+              
+              <div className="space-y-3 max-h-64 overflow-y-auto pr-2 -mr-2">
+                {files.map((file, index) => (
+                  <div
+                    key={file.id}
+                    className="flex items-center gap-4 p-4 border border-border/50 rounded-lg bg-card/50 hover:bg-card transition-all duration-200 group"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <X className="w-4 h-4" />
-                  </Button>
-                </div>
-              ))}
+                    <div className={cn(
+                      "h-10 w-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors",
+                      file.status === 'success' && "bg-green-100 dark:bg-green-900/20",
+                      file.status === 'error' && "bg-red-100 dark:bg-red-900/20",
+                      file.status === 'uploading' && "bg-blue-100 dark:bg-blue-900/20"
+                    )}>
+                      <FileText className={cn(
+                        "h-5 w-5",
+                        file.status === 'success' && "text-green-600 dark:text-green-400",
+                        file.status === 'error' && "text-red-600 dark:text-red-400",
+                        file.status === 'uploading' && "text-blue-600 dark:text-blue-400"
+                      )} />
+                    </div>
+                    
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-1">
+                        <p className="text-sm font-medium truncate pr-2">{file.file.name}</p>
+                        <div className="flex items-center gap-2 flex-shrink-0">
+                          {getStatusIcon(file.status)}
+                          <span className={cn(
+                            "text-xs font-medium",
+                            file.status === 'success' && "text-green-600 dark:text-green-400",
+                            file.status === 'error' && "text-red-600 dark:text-red-400",
+                            file.status === 'uploading' && "text-blue-600 dark:text-blue-400"
+                          )}>
+                            {file.status === 'uploading' && `${Math.round(file.progress)}%`}
+                            {file.status === 'success' && 'Complete'}
+                            {file.status === 'error' && 'Failed'}
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-muted-foreground">
+                          {(file.file.size / 1024 / 1024).toFixed(1)} MB
+                        </span>
+                        {file.status === 'uploading' && (
+                          <div className="flex-1 mx-3">
+                            <Progress 
+                              value={file.progress} 
+                              className="h-1.5 bg-muted" 
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => removeFile(file.id)}
+                      className="flex-shrink-0 h-8 w-8 p-0 hover:bg-red-100 hover:text-red-600 dark:hover:bg-red-900/20 dark:hover:text-red-400 opacity-0 group-hover:opacity-100 transition-all duration-200"
+                    >
+                      <X className="w-4 h-4" />
+                    </Button>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
-          {/* Actions */}
-          <div className="flex justify-end gap-2">
-            <Button variant="outline" onClick={handleClose}>
-              Close
-            </Button>
+          {/* Enhanced Actions */}
+          <div className="flex justify-between items-center pt-4 border-t border-border/30">
+            <div className="text-xs text-muted-foreground">
+              {files.length > 0 && (
+                <span>
+                  {files.filter(f => f.status === 'success').length} of {files.length} uploaded successfully
+                </span>
+              )}
+            </div>
+            <div className="flex gap-3">
+              <Button 
+                variant="outline" 
+                onClick={handleClose}
+                className="border-border/50 hover:border-border hover:bg-accent/50 transition-all duration-200"
+              >
+                {files.some(f => f.status === 'success') ? 'Done' : 'Cancel'}
+              </Button>
+              {files.length > 0 && files.every(f => f.status !== 'uploading') && (
+                <Button 
+                  onClick={() => setFiles([])}
+                  className="btn-primary-gradient"
+                >
+                  Upload More
+                </Button>
+              )}
+            </div>
           </div>
         </div>
       </DialogContent>
