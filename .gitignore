@@ -1,24 +1,277 @@
-# Logs
-logs
-*.log
+# =====================================================
+# FRONTEND - Node.js / React / Vite
+# =====================================================
+
+# Dependencies
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Build outputs
+dist/
+dist-ssr/
+build/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Runtime logs
+logs/
+*.log
+
+# Cache directories
+.npm
+.yarn
+.pnpm-store
+.cache/
+.parcel-cache/
+
+# =====================================================
+# BACKEND - Python / FastAPI
+# =====================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# =====================================================
+# DATABASE
+# =====================================================
+
+# PostgreSQL
+*.sql
+*.dump
+*.backup
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# Database backup files
+*.bak
+*.backup
+
+# =====================================================
+# UPLOADS & DATA
+# =====================================================
+
+# Uploaded files
+uploads/
+files/
+documents/
+contracts/
+temp/
+tmp/
+
+# Large data files
+*.csv
+*.xlsx
+*.pdf
+*.docx
+*.txt
+# Exception: keep test contracts
+!test_contracts/*.txt
+
+# =====================================================
+# SECURITY & CREDENTIALS
+# =====================================================
+
+# Environment files
+.env*
+!.env.example
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# API keys and secrets
+secrets/
+*.secret
+
+# =====================================================
+# OPERATING SYSTEM
+# =====================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.nfs*
+
+# =====================================================
+# EDITORS & IDEs
+# =====================================================
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# JetBrains IDEs
+.idea/
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =====================================================
+# DEVELOPMENT & DEPLOYMENT
+# =====================================================
+
+# Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+docker-compose.*.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Local development
+.local
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Testing
+.nyc_output
+coverage/
+.coverage
+
+# Miscellaneous
+*.tgz
+*.tar.gz
+*.zip
+*.rar
