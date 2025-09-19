@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { apiLogin, apiSignup } from '@/lib/api';
 
 interface User {
   id: string;
@@ -9,6 +10,7 @@ interface User {
 interface AuthContextType {
   user: User | null;
   login: (username: string, password: string) => Promise<boolean>;
+  signup: (username: string, password: string) => Promise<boolean>;
   logout: () => void;
   isAuthenticated: boolean;
   isLoading: boolean;
@@ -33,50 +35,52 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check for existing token on mount
     const token = localStorage.getItem('auth-token');
     const userData = localStorage.getItem('user-data');
-    
     if (token && userData) {
       try {
         const parsedUser = JSON.parse(userData);
         setUser(parsedUser);
       } catch (error) {
-        // Invalid stored data, clear it
         localStorage.removeItem('auth-token');
         localStorage.removeItem('user-data');
       }
     }
-    
     setIsLoading(false);
   }, []);
 
   const login = async (username: string, password: string): Promise<boolean> => {
     setIsLoading(true);
-    
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Mock authentication - password must be "test123"
-    if (password === 'test123') {
-      const mockUser: User = {
-        id: '1',
-        username,
-        name: username.charAt(0).toUpperCase() + username.slice(1),
-      };
-      
-      const mockToken = `mock-jwt-token-${Date.now()}`;
-      
-      localStorage.setItem('auth-token', mockToken);
-      localStorage.setItem('user-data', JSON.stringify(mockUser));
-      
-      setUser(mockUser);
-      setIsLoading(false);
+    try {
+      const res = await apiLogin(username, password);
+      const token: string = res.access_token;
+      localStorage.setItem('auth-token', token);
+      const newUser: User = { id: 'me', username, name: username.charAt(0).toUpperCase() + username.slice(1) };
+      localStorage.setItem('user-data', JSON.stringify(newUser));
+      setUser(newUser);
       return true;
+    } catch (e) {
+      return false;
+    } finally {
+      setIsLoading(false);
     }
-    
-    setIsLoading(false);
-    return false;
+  };
+
+  const signup = async (username: string, password: string): Promise<boolean> => {
+    setIsLoading(true);
+    try {
+      const res = await apiSignup(username, password);
+      const token: string = res.access_token;
+      localStorage.setItem('auth-token', token);
+      const newUser: User = { id: 'me', username, name: username.charAt(0).toUpperCase() + username.slice(1) };
+      localStorage.setItem('user-data', JSON.stringify(newUser));
+      setUser(newUser);
+      return true;
+    } catch (e) {
+      return false;
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const logout = () => {
@@ -88,6 +92,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const value: AuthContextType = {
     user,
     login,
+    signup,
     logout,
     isAuthenticated: !!user,
     isLoading,

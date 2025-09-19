@@ -9,6 +9,11 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ContractDetail from "./pages/ContractDetail";
 import NotFound from "./pages/NotFound";
+import Upload from "./pages/Upload";
+import Query from "./pages/Query";
+import Insights from "./pages/Insights";
+import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -32,28 +37,29 @@ const App = () => (
                 <ContractDetail />
               </DashboardLayout>
             } />
+            <Route path="/upload" element={
+              <DashboardLayout>
+                <Upload />
+              </DashboardLayout>
+            } />
+            <Route path="/query" element={
+              <DashboardLayout>
+                <Query />
+              </DashboardLayout>
+            } />
             <Route path="/insights" element={
               <DashboardLayout>
-                <div className="p-6">
-                  <h1 className="text-3xl font-bold">Insights</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Insights />
               </DashboardLayout>
             } />
             <Route path="/reports" element={
               <DashboardLayout>
-                <div className="p-6">
-                  <h1 className="text-3xl font-bold">Reports</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Reports />
               </DashboardLayout>
             } />
             <Route path="/settings" element={
               <DashboardLayout>
-                <div className="p-6">
-                  <h1 className="text-3xl font-bold">Settings</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Settings />
               </DashboardLayout>
             } />
             <Route path="*" element={<NotFound />} />
